@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>Form Currency</th>
+        <th>To Currency</th>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <input id="amount">
+        </td>
+        <td>
+            <select id="fromC">
+                <option value="24000">USD</option>
+                <option value="1">VND</option>
+                <option value="34000">EU</option>
+            </select>
+        </td>
+
+        <td>
+            <select id="toC">
+                <option value="1">VND</option>
+                <option value="24000">USD</option>
+                <option value="34000">EU</option>
+
+            </select>
+        </td>
+        <td>
+            <button onclick="convert()" style="background: cornflowerblue">Convert</button>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>
+
+<script>
+    function convert() {
+        let inputAmount = document.getElementById("amount");
+        let selectFrom = document.getElementById("fromC");
+        let selectTO = document.getElementById("toC")
+
+        let convert = inputAmount.value * selectFrom.value / selectTO.value;
+        alert(convert)
+
+    }
+</script>

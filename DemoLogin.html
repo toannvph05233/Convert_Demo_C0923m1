@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Login</h1>
+<b>Username</b> <input placeholder="Nhập username" id="username">
+<br><br>
+<b>Password</b> <input type="password" placeholder="Nhập password" id="password">
+<br><br>
+<button onclick="login()">Login</button>
+</body>
+</html>
+
+
+<script>
+
+    function login() {
+        // gán biến inputUserName = cái thẻ HTML có id = username;
+        let inputUserName = document.getElementById("username");
+        let inputPassword = document.getElementById("password");
+
+        let username = "bạn nhập tên là " + inputUserName.value;
+        let password = "bạn nhập password là " + inputPassword.value;
+        alert(username);
+        alert(password);
+    }
+
+</script>
